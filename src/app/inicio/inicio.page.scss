@@ -1,0 +1,21 @@
+ion-thumbnail img {
+    width: 80px;  /* Tamaño de la imagen */
+    height: auto;
+  }
+  
+  ion-item {
+    --inner-padding-end: 0px;
+    --inner-padding-start: 0px;
+    border-bottom: 1px solid #ccc; /* Línea de separación */
+    padding: 10px;
+  }
+  
+  ion-label h2 {
+    font-weight: bold;
+  }
+  
+  ion-button {
+    width: 120px;
+    font-size: 14px;
+  }
+  
