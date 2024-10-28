@@ -29,6 +29,12 @@ const routes: Routes = [
     path: 'profile',
     loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
   },
+  {
+    path: 'mesero',
+    loadChildren: () => import('./mesero/mesero.module').then(m => m.MeseroPageModule)
+  },
+
+
 ];
 
 @NgModule({
