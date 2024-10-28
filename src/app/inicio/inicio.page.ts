@@ -1,16 +1,20 @@
 import { Component } from '@angular/core';
-import { AlertController } from '@ionic/angular';
-import { Router } from '@angular/router';  // Importar Router
+import { AlertController, NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inicio',
-  templateUrl: 'inicio.page.html',
-  styleUrls: ['inicio.page.scss'],
+  templateUrl: './inicio.page.html',
+  styleUrls: ['./inicio.page.scss'],
 })
 export class InicioPage {
-  cartCount = 0;  // Variable para el conteo del carrito
+  cartCount: number = 0;
 
-  constructor(private alertController: AlertController, private router: Router) {} // Inyectar Router
+  constructor(
+    private alertController: AlertController,
+    private router: Router,
+    private navCtrl: NavController
+  ) {}
 
   async presentWelcomeAlert() {
     const storedUsername = localStorage.getItem('username');
@@ -32,6 +36,14 @@ export class InicioPage {
   }
 
   irACarrito() {
-    this.router.navigate(['/mesero']); // Redirige a la página del mesero
+    this.navCtrl.navigateForward('/carrito');  // Redirige a la página del carrito
+  }
+
+  irAMesero() {
+    this.router.navigate(['/mesero']);  // Redirige a la pestaña mesero
+  }
+
+  irAMenuAdministrador() {
+    this.navCtrl.navigateForward('/admin-menu');  // Redirige al menú del administrador
   }
 }

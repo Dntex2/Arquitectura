@@ -32,7 +32,11 @@ const routes: Routes = [
   {
     path: 'mesero',
     loadChildren: () => import('./mesero/mesero.module').then(m => m.MeseroPageModule)
+  },  {
+    path: 'administrador',
+    loadChildren: () => import('./administrador/administrador.module').then( m => m.AdministradorPageModule)
   },
+
 
 
 ];
