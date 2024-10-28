@@ -1,0 +1,45 @@
+
+<ion-content>
+  <ion-list>
+    <!-- PRODUCTO 1 -->
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="https://media.ambito.com/p/eeeb0aa8490c86a5ed10e052acb243d0/adjuntos/239/imagenes/039/444/0039444907/pastasjpg.jpg" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Fideos</h2>
+        <p>Descripción: Sabrosos fideos caseros</p>
+        <p>Precio: $74.99</p>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button color="primary" (click)="editarProducto()">Editar</ion-button>
+        <ion-button color="danger" (click)="eliminarProducto()">Eliminar</ion-button>
+      </ion-buttons>
+    </ion-item>
+
+    <!-- PRODUCTO 2 -->
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="https://www.gourmet.cl/wp-content/uploads/2016/09/Foto-sitio-web.jpg" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Lentejas</h2>
+        <p>Descripción: Deliciosas lentejas</p>
+        <p>Precio: $74.99</p>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button color="primary" (click)="editarProducto()">Editar</ion-button>
+        <ion-button color="danger" (click)="eliminarProducto()">Eliminar</ion-button>
+      </ion-buttons>
+    </ion-item>
+    
+    <!-- Más productos -->
+  </ion-list>
+
+  <!-- Botón para agregar nuevos productos -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="success" (click)="agregarProducto()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

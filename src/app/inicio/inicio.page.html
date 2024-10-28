@@ -1,15 +1,20 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="primary">
-    <ion-title>Restaurante Siglo XXI</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <ion-header [translucent]="true">
+    <ion-toolbar color="primary">
+      <ion-title>Restaurante Siglo XXI</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="irAMesero()"> <!-- Llamar a la función al hacer clic -->
+          <ion-icon name="cart" slot="icon-only"></ion-icon>
+          <ion-badge color="danger">{{ cartCount }}</ion-badge>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
   <ion-list>
     <!-- PRODUCTO 1 -->
     <ion-item>
       <ion-thumbnail slot="start">
-        <img src="https://img.freepik.com/fotos-premium/plato-gourmet-restaurante_144627-7262.jpg" />
+        <img src="https://media.ambito.com/p/eeeb0aa8490c86a5ed10e052acb243d0/adjuntos/239/imagenes/039/444/0039444907/pastasjpg.jpg" />
       </ion-thumbnail>
       <ion-label>
         <h2>Fideos</h2>
@@ -17,13 +22,13 @@
         <p>Precio: $74.99</p>
         <p>Tiempo Estimado: 15 min</p>
       </ion-label>
-      <ion-button color="danger" slot="end">Añadir al carro</ion-button>
+      <ion-button color="danger" slot="end" (click)="addToCart()">Añadir al carro</ion-button>
     </ion-item>
 
     <!-- PRODUCTO 2 -->
     <ion-item>
       <ion-thumbnail slot="start">
-        <img src="https://img.freepik.com/fotos-premium/cliente-pidiendo-comida-restaurante_144627-7263.jpg" />
+        <img src="https://www.gourmet.cl/wp-content/uploads/2016/09/Foto-sitio-web.jpg" />
       </ion-thumbnail>
       <ion-label>
         <h2>Lentejas</h2>
@@ -31,13 +36,13 @@
         <p>Precio: $74.99</p>
         <p>Tiempo Estimado: 20 min</p>
       </ion-label>
-      <ion-button color="danger" slot="end">Añadir al carro</ion-button>
+      <ion-button color="danger" slot="end" (click)="addToCart()">Añadir al carro</ion-button>
     </ion-item>
 
     <!-- PRODUCTO 3 -->
     <ion-item>
       <ion-thumbnail slot="start">
-        <img src="https://img.freepik.com/fotos-premium/plato-de-comida_144627-7264.jpg" />
+        <img src="https://images.aws.nestle.recipes/original/c8a76298a32f4c3a3c0e24111f0904ff_porotos_con_riendas.jpg" />
       </ion-thumbnail>
       <ion-label>
         <h2>Porotos</h2>
@@ -45,13 +50,13 @@
         <p>Precio: $74.99</p>
         <p>Tiempo Estimado: 25 min</p>
       </ion-label>
-      <ion-button color="danger" slot="end">Añadir al carro</ion-button>
+      <ion-button color="danger" slot="end" (click)="addToCart()">Añadir al carro</ion-button>
     </ion-item>
 
     <!-- PRODUCTO 4 -->
     <ion-item>
       <ion-thumbnail slot="start">
-        <img src="https://img.freepik.com/fotos-premium/plato-de-comida_144627-7265.jpg" />
+        <img src="https://imag.bonviveur.com/pizza-margarita.jpg" />
       </ion-thumbnail>
       <ion-label>
         <h2>Pizza Margarita</h2>
@@ -59,13 +64,13 @@
         <p>Precio: $84.99</p>
         <p>Tiempo Estimado: 30 min</p>
       </ion-label>
-      <ion-button color="danger" slot="end">Añadir al carro</ion-button>
+      <ion-button color="danger" slot="end" (click)="addToCart()">Añadir al carro</ion-button>
     </ion-item>
 
     <!-- PRODUCTO 5 -->
     <ion-item>
       <ion-thumbnail slot="start">
-        <img src="https://img.freepik.com/fotos-premium/plato-de-comida_144627-7266.jpg" />
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCEi68ct-UyKJrn5uyjqEYf8Z8sqHd1Qs61A&s" />
       </ion-thumbnail>
       <ion-label>
         <h2>Hamburguesa Clásica</h2>
@@ -73,49 +78,7 @@
         <p>Precio: $99.99</p>
         <p>Tiempo Estimado: 20 min</p>
       </ion-label>
-      <ion-button color="danger" slot="end">Añadir al carro</ion-button>
-    </ion-item>
-
-    <!-- PRODUCTO 6 -->
-    <ion-item>
-      <ion-thumbnail slot="start">
-        <img src="https://img.freepik.com/fotos-premium/plato-de-comida_144627-7267.jpg" />
-      </ion-thumbnail>
-      <ion-label>
-        <h2>Tacos al Pastor</h2>
-        <p>Descripción: Auténticos tacos mexicanos</p>
-        <p>Precio: $64.99</p>
-        <p>Tiempo Estimado: 15 min</p>
-      </ion-label>
-      <ion-button color="danger" slot="end">Añadir al carro</ion-button>
-    </ion-item>
-
-    <!-- PRODUCTO 7 -->
-    <ion-item>
-      <ion-thumbnail slot="start">
-        <img src="https://img.freepik.com/fotos-premium/plato-de-comida_144627-7268.jpg" />
-      </ion-thumbnail>
-      <ion-label>
-        <h2>Sushi Roll</h2>
-        <p>Descripción: Delicioso sushi de salmón</p>
-        <p>Precio: $89.99</p>
-        <p>Tiempo Estimado: 10 min</p>
-      </ion-label>
-      <ion-button color="danger" slot="end">Añadir al carro</ion-button>
-    </ion-item>
-
-    <!-- PRODUCTO 8 -->
-    <ion-item>
-      <ion-thumbnail slot="start">
-        <img src="https://img.freepik.com/fotos-premium/plato-de-comida_144627-7269.jpg" />
-      </ion-thumbnail>
-      <ion-label>
-        <h2>Enchiladas Verdes</h2>
-        <p>Descripción: Enchiladas con salsa verde</p>
-        <p>Precio: $74.99</p>
-        <p>Tiempo Estimado: 20 min</p>
-      </ion-label>
-      <ion-button color="danger" slot="end">Añadir al carro</ion-button>
+      <ion-button color="danger" slot="end" (click)="addToCart()">Añadir al carro</ion-button>
     </ion-item>
   </ion-list>
 </ion-content>
